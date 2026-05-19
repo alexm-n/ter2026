@@ -128,7 +128,7 @@ class BraTS_SimCLR_Dataset(Dataset):
         view_b = add_gaussian_noise(augmentation_pipeline(base_image))
         return view_a, view_b
 
-# --- Dataset Segmentation (Ton 2ème notebook) ---
+# --- Dataset Segmentation ---
 class BraTS2DDataset(Dataset):
     def __init__(self, data_dir):
         self.patient_folders = glob.glob(os.path.join(data_dir, "BraTS2021_*"))
